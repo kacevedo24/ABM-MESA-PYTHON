@@ -32,10 +32,5 @@ def model():
 def canvas():
     return canvas_element.html("500px", "500px")
 
-"""@app.route('/data')
-def data():
-    return get_agentes_limpios(model)"""
-
-
 if __name__ == '__main__':
     app.run(debug=True)
