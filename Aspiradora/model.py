@@ -70,14 +70,7 @@ class ModeloAspirar(Model):
 
         # Luego, llamar al método "step()" de todos los otros agentes
         self.schedule.step()
-        """
-        #Verificar si todas las celdas estan limpias
-        celdas_totales = self.width * self.height
-        celdas_limpias = sum(1 for agent in self.schedule.agents if isinstance(agent, Celdas) and agent.estado == "Limpio")
-        if celdas_limpias == celdas_totales:
-            #detener el modelo
-            self.running = False"""
-        
+              
         #Si no hay mas fuego, el modelo debe parar
         if self.ConteoAux(self, "Sucio") == 0:
            self.running = False
